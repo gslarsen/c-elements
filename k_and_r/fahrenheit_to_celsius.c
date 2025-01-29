@@ -10,7 +10,7 @@ int main()
   while (fahr <= upper)
   {
     float celsius = (5.0 / 9.0) * (fahr - 32.0);
-    printf("%3.0f\t\t%0.1f\n", fahr, celsius);
+    printf("%5.1f\t\t%5.1f\n", fahr, celsius);
     fahr = fahr + step;
   }
 }
