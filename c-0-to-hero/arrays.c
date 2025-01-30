@@ -9,4 +9,5 @@ int main()
     printf("%d\n", ids[3]);
     ids[6] = 0x41; // 65
     printf("%d\n", ids[6]);
+    return 0;
 }
