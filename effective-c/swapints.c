@@ -9,7 +9,9 @@
 void swap(int *pa, int *pb) {  // pa → a: 21    pb → b: 17
   int t = *pa;                 // t: 21
   *pa = *pb;                   // pa -> a: 17  pb -> b: 17
-  *pb = t;                     // pb -> b: 21
+  *pb = t;
+  printf("pa: %d, pb: %d\n", pa, pb);
+  printf("*pa: %d, *pb: %d\n", *pa, *pb);  // pb -> b: 21
 }
 
 int main() {
