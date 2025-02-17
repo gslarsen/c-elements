@@ -15,6 +15,7 @@ void swap(int *pa, int *pb) {  // pa → a: 21   pb → b: 17
   printf("*pa: %d, *pb: %d\n", *pa, *pb);  // pb -> b: 21
   // random bool to test if compiler can handle:
   // https://github.com/microsoft/vscode-cpptools/issues/10696#issuecomment-2652476603
+  // https://github.com/microsoft/vscode-cpptools/discussions/11718#discussioncomment-7635890
   bool isTrue = true;
   if (isTrue) {
     printf("it's true and shows up as an int like this: %d\n", isTrue);
