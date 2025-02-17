@@ -1,3 +1,4 @@
+#include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
 /*
@@ -5,13 +6,22 @@
   generating object addresses, passing those by value, and then dereferencing
   the copied addresses to access the original objects.
 */
-
-void swap(int *pa, int *pb) {  // pa → a: 21    pb → b: 17
+// note that int *pa = &a; so declaration and assignment are done in one step
+void swap(int *pa, int *pb) {  // pa → a: 21   pb → b: 17
   int t = *pa;                 // t: 21
   *pa = *pb;                   // pa -> a: 17  pb -> b: 17
   *pb = t;
-  printf("pa: %d, pb: %d\n", pa, pb);
+  printf("pa: %p, pb: %p\n", pa, pb);
   printf("*pa: %d, *pb: %d\n", *pa, *pb);  // pb -> b: 21
+  // random bool to test if compiler can handle:
+  // https://github.com/microsoft/vscode-cpptools/issues/10696#issuecomment-2652476603
+  bool isTrue = true;
+  if (isTrue) {
+    printf("it's true and shows up as an int like this: %d\n", isTrue);
+    printf("CHAR_BIT: %d\n", CHAR_BIT);
+  } else {
+    printf("it's false and shows up as an int like this: %d\n", isTrue);
+  }
 }
 
 int main() {
