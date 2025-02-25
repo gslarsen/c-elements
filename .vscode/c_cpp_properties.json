@@ -3,16 +3,14 @@
     {
       "name": "Mac",
       "includePath": ["${workspaceFolder}/**"],
-      // for bool in C23
-      // https://github.com/microsoft/vscode-cpptools/issues/10696#issuecomment-2652476603
-      // https://github.com/microsoft/vscode-cpptools/discussions/11718#discussioncomment-7635890
-      "defines": ["true=1", "false=0"],
+
+      "defines": ["true=1", "false=0", "nullptr=NULL"],
       "macFrameworkPath": [
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
       ],
       "compilerPath": "/usr/bin/clang",
       "cStandard": "c23",
-      "cppStandard": "c++17",
+      "cppStandard": "c++23",
       "intelliSenseMode": "macos-clang-x64"
     }
   ],
