@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
+
 int main(int argc, [[maybe_unused]] char* argv[argc + 1]) {
   double A[5] = {
       [0] = 9.0,

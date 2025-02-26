@@ -49,6 +49,8 @@ OPT ?= -O3 -march=native -fdata-sections -ffunction-sections
 DEP = -MD
 
 CFLAGS = ${SILENT} ${OPT} ${WAR} ${STD} ${INC} ${DEP}
+# Use C++17 for C++ and Objective-C++ files
+CXXFLAGS = -std=c++17
 
 # The linker flags. Here this corresponds to eliminate all of the
 # collected sections that are finally not needed in the executable.
