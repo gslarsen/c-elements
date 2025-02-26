@@ -7,12 +7,12 @@
   the copied addresses to access the original objects.
 */
 // note that int *pa = &a; so declaration and assignment are done in one step
-void swap(int *pa, int *pb) {  // pa → a: 21   pb → b: 17
-  int t = *pa;                 // t: 21
-  *pa = *pb;                   // pa -> a: 17  pb -> b: 17
+void swap(int *pa, int *pb) { // pa → a: 21   pb → b: 17
+  int t = *pa;                // t: 21
+  *pa = *pb;                  // pa -> a: 17  pb -> b: 17
   *pb = t;
   printf("pa: %p, pb: %p\n", pa, pb);
-  printf("*pa: %d, *pb: %d\n", *pa, *pb);  // pb -> b: 21
+  printf("*pa: %d, *pb: %d\n", *pa, *pb); // pb -> b: 21
   // random bool to test if compiler can handle new C23 feature
   bool isTrue = true;
 
@@ -28,7 +28,7 @@ int main() {
   int a = 21;
   int b = 17;
   printf("before swap: a = %d, b = %d\n", a, b);
-  swap(&a, &b);  // unary & (address-of) creates a pointer to its operand
+  swap(&a, &b); // unary & (address-of) creates a pointer to its operand
   printf("after swap: a = %d, b = %d\n", a, b);
   return EXIT_SUCCESS;
 }
