@@ -1,0 +1,4 @@
+---
+# use defaults from the Google style, but with ColumnLimit of 100 vs. 80
+BasedOnStyle: Google
+ColumnLimit: 100
