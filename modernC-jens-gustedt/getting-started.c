@@ -17,6 +17,9 @@ int main(int argc, [[maybe_unused]] char* argv[argc + 1]) {
       printf("element %zu is %g, \tits square is %g\n", i, A[i], A[i] * A[i]);
     }
   }
+  printf("maximum integer is %d\n", INT32_MAX);
+  printf("maximum integer is %ld\n", INTMAX_MAX);
+  printf("maximum integer is %lld\n", INT64_MAX);
 
   return EXIT_SUCCESS;
 }
