@@ -16,7 +16,6 @@ In `~/Library/Application Support/Code/User/settings.json`:
     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
   },
 
-  "C_Cpp.intelliSenseEngine": "disabled",
   "clangd.path": "/Users/gregorylarsen/Library/Application Support/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/19.1.2/clangd_19.1.2/bin/clangd",
   "clangd.checkUpdates": true,
 
