@@ -1,6 +1,7 @@
 #include <stdio.h>
 void swap(int *pa,
           int *pb);  // defined elsewhere
+
 void swap(int *pa, int *pb) {
   int t = *pa;
   *pa = *pb;
