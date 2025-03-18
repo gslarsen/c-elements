@@ -1,3 +1,4 @@
+#include <limits.h>
 #include <stdio.h>
 void swap(int *pa,
           int *pb);  // defined elsewhere
