@@ -1,3 +1,7 @@
+// Description: This program compares the performance and precision of text and binary file storage
+// for fake employee data. It creates a large number of employee records, writes them to both text
+// and binary files, and then reads them back. It measures the time taken for read/write operations
+// and checks for precision loss in the text format.
 
 #include <math.h>
 #include <stdio.h>
@@ -7,7 +11,7 @@
 #include <time.h>
 
 #define N 100'000  // Number of employees
-#define SALARY 75000.0
+#define SALARY 100'000.0
 
 typedef struct {
   int id;
