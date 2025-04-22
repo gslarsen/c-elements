@@ -11,7 +11,7 @@ int main() {
   printf("Age: %d\n", age);
   printf("Name: %s\n", name);
   printf("Weight (lbs): %.2f\n", weight);
-  printf("Height (ft): %.1lf\n", height);
+  printf("Height (ft): %.1f\n", height);
   printf("Is Married: %d\n", isMarried);
   printf("Gender: %c\n", gender);
 
