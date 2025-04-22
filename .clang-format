@@ -2,7 +2,6 @@
 # use defaults from the Google style (or LLVM), but with ColumnLimit of 100 vs. 80
 BasedOnStyle: Google
 ColumnLimit: 100
-Language: C
 # Default is ALL: Merge all functions fitting on a single line
 # e.g int main() { printf("hello, world\n"); }
 AllowShortFunctionsOnASingleLine: None
