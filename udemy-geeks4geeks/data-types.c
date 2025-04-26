@@ -1,46 +1,45 @@
+#include <float.h>
+#include <limits.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <wchar.h>
 
 int main() {
-  int age = 59;
-  char name[] = "Gregory";
-  float weight = 150.5;
-  double height = 5 + 2 / 3.0;
-  bool isMarried = true;
-  char gender = 'M';
-  printf("Age: %d\n", age);
-  printf("Name: %s\n", name);
-  printf("Weight (lbs): %.2f\n", weight);
-  printf("Height (ft): %.1f\n", height);
-  printf("Is Married: %d\n", isMarried);
-  printf("Gender: %c\n", gender);
+  printf("bool: %zu bytes, %d bits\n", sizeof(bool), (int)(8 * sizeof(bool)));
+  printf("char: %zu byte, %lu bits, max: %d, min: %d\n", sizeof(char),
+         (unsigned long)(8 * sizeof(char)), SCHAR_MAX, SCHAR_MIN);
+  printf("short: %zu bytes, %lu bits, max: %d, min: %d\n", sizeof(short), 8 * sizeof(short),
+         SHRT_MAX, SHRT_MIN);
+  printf("int: %zu bytes, %lu bits, max: %d, min: %d\n", sizeof(int), 8 * sizeof(int), INT_MAX,
+         INT_MIN);
+  printf("long: %zu bytes, %lu bits, max: %ld, min: %ld\n", sizeof(long), 8 * sizeof(long),
+         LONG_MAX, LONG_MIN);
+  printf("long long: %zu bytes, %lu bits, max: %lld, min: %lld\n", sizeof(long long),
+         8 * sizeof(long long), LLONG_MAX, LLONG_MIN);
+  printf("float: %zu bytes, %lu bits, max/min: ±%f\n", sizeof(float), 8 * sizeof(float), FLT_MAX);
+  printf("double: %zu bytes, %lu bits, max/min: ±%f\n", sizeof(double), 8 * sizeof(double),
+         DBL_MAX);
+  printf("long double: %zu bytes, %lu bits, max/min: ±%Lf\n", sizeof(long double),
+         8 * sizeof(long double), LDBL_MAX);
 
-  // Print the sizes
-  printf("Size of weight (float): %zu bytes\n", sizeof(weight));
-  printf("Size of height (double): %zu bytes\n", sizeof(height));
+  printf("\n*** UNSIGNED TYPES ***\n");
+  printf("unsigned char: %zu byte, %lu bits, max: %d, min: %d\n", sizeof(unsigned char),
+         (unsigned long)(8 * sizeof(char)), UCHAR_MAX,
+         ((unsigned char)(-1) == UCHAR_MAX) ? 0 : (unsigned char)(-1));
+  printf("unsigned short: %zu bytes, %lu bits, max: %d, min: %d\n", sizeof(unsigned short),
+         8 * sizeof(short), USHRT_MAX,
+         ((unsigned short)(-1) == USHRT_MAX) ? 0 : (unsigned short)(-1));
+  printf("unsigned int: %zu bytes, %lu bits, max: %u, min: %u\n", sizeof(unsigned int),
+         8 * sizeof(int), UINT_MAX, ((unsigned int)(-1) == UINT_MAX) ? 0 : (unsigned int)(-1));
+  printf("unsigned long: %zu bytes, %lu bits, max: %lu, min: %lu\n", sizeof(unsigned long),
+         8 * sizeof(long), ULONG_MAX, ((unsigned long)(-1) == ULONG_MAX) ? 0 : (unsigned long)(-1));
+  printf("unsigned long long: %zu bytes, %lu bits, max: %llu, min: %llu\n",
+         sizeof(unsigned long long), 8 * sizeof(long long), ULLONG_MAX,
+         ((unsigned long long)(-1) == ULLONG_MAX) ? 0 : (unsigned long long)(-1));
 
-  // Print the sizes of other types
-  printf("Size of int: %zu bytes\n", sizeof(int));
-  printf("Size of char: %zu bytes\n", sizeof(char));
-  printf("Size of bool: %zu bytes\n", sizeof(bool));
-  printf("Size of float: %zu bytes\n", sizeof(float));
-  printf("Size of double: %zu bytes\n", sizeof(double));
-  printf("Size of long double: %zu bytes\n", sizeof(long double));
-  printf("Size of size_t: %zu bytes\n", sizeof(size_t));
-  printf("Size of short: %zu bytes\n", sizeof(short));
-  printf("Size of long: %zu bytes\n", sizeof(long));
-  printf("Size of long long: %zu bytes\n", sizeof(long long));
+  printf("\n*** OTHER TYPES ***\n");
   printf("Size of __int128: %zu bytes\n", sizeof(__int128));
-  printf("Size of unsigned int: %zu bytes\n", sizeof(unsigned int));
-  printf("Size of unsigned char: %zu bytes\n", sizeof(unsigned char));
-  printf("Size of unsigned short: %zu bytes\n", sizeof(unsigned short));
-  printf("Size of unsigned long: %zu bytes\n", sizeof(unsigned long));
-  printf("Size of unsigned long long: %zu bytes\n", sizeof(unsigned long long));
-  printf("Size of signed char: %zu bytes\n", sizeof(signed char));
-  printf("Size of signed short: %zu bytes\n", sizeof(signed short));
-  printf("Size of signed long: %zu bytes\n", sizeof(signed long));
-  printf("Size of signed long long: %zu bytes\n", sizeof(signed long long));
   printf("Size of wchar_t: %zu bytes\n", sizeof(wchar_t));
-
+  printf("Size of size_t: %zu bytes\n", sizeof(size_t));
   return 0;
 }
