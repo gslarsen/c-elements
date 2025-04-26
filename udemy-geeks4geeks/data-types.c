@@ -29,10 +29,12 @@ int main() {
   printf("unsigned long long: %zu bytes, %lu bits, min: %llu, max: %llu\n",
          sizeof(unsigned long long), 8 * sizeof(long long),
          ((unsigned long long)(-1) == ULLONG_MAX) ? 0 : (unsigned long long)(-1), ULLONG_MAX);
-  printf("float: %zu bytes, %lu bits, range: ±%f\n", sizeof(float), 8 * sizeof(float), FLT_MAX);
-  printf("double: %zu bytes, %lu bits, range: ±%f\n", sizeof(double), 8 * sizeof(double), DBL_MAX);
-  printf("long double: %zu bytes, %lu bits, range: ±%Lf\n", sizeof(long double),
-         8 * sizeof(long double), LDBL_MAX);
+  printf("float: %zu bytes, %lu bits, min: ±%e, max: ±%e\n", sizeof(float), 8 * sizeof(float),
+         FLT_MIN, FLT_MAX);
+  printf("double: %zu bytes, %lu bits, min: ±%e, max: ±%e\n", sizeof(double), 8 * sizeof(double),
+         DBL_MIN, DBL_MAX);
+  printf("long double: %zu bytes, %lu bits, min: ±%Le, max: ±%Le\n", sizeof(long double),
+         8 * sizeof(long double), LDBL_MIN, LDBL_MAX);
 
   printf("\n*** SIZES OF OTHER TYPES ***\n");
   printf("Size of __int128: %zu bytes\n", sizeof(__int128));
