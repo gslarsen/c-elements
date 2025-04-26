@@ -5,9 +5,10 @@
 #include <wchar.h>
 
 int main() {
-  printf("bool: %zu byte, %d bits\n", sizeof(bool), (int)(8 * sizeof(bool)));
+  printf("bool: %zu byte, %d bits, false: %d, true: %d\n", sizeof(bool), (int)(8 * sizeof(bool)),
+         false, true);
   printf("char: %zu byte, %lu bits, min: %d, max: %d\n", sizeof(char),
-         (unsigned long)(8 * sizeof(char)), SCHAR_MIN, SCHAR_MAX);
+         (unsigned long)(8 * sizeof(char)), CHAR_MIN, CHAR_MAX);
   printf("unsigned char: %zu byte, %lu bits, min: %d, max: %d\n", sizeof(unsigned char),
          (unsigned long)(8 * sizeof(char)),
          ((unsigned char)(-1) == UCHAR_MAX) ? 0 : (unsigned char)(-1), UCHAR_MAX);
