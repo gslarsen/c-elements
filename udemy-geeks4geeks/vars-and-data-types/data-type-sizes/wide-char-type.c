@@ -4,6 +4,7 @@
 
 int main() {
   // Set locale to support Japanese characters specifically
+  // can also try   setlocale(LC_ALL, "");  // Set locale to system default
   if (setlocale(LC_ALL, "en_US.UTF-8") == NULL) {
     fprintf(stderr, "Locale setting failed\n");
   }

@@ -65,6 +65,7 @@ int main() {
   printf("Decimal value of 0b1101: %d\n", d);
 
   printf("\nFloating point literals:\n");
+  // for floating point #s, %g prints the shorter of %f or %e
   printf("float f: %g\n", f);
   printf("double g: %g\n", g);
   printf("long double h: %Lg\n", h);
