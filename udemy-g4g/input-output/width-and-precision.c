@@ -10,7 +10,8 @@ int main() {
   float y = 3.1;
   printf("%5g\n", y);  // right-aligned, 5 characters wide
   float z = 3.14159;
-  printf("%8.3f\n", z);  // right-aligned, 8 characters wide, 3 decimal places
+  printf("%8.3f\n", z);   // right-aligned, 8 characters wide, 3 decimal places
+  printf("%08.3f\n", z);  // right-aligned, 8 characters wide, 3 decimal places, zero-padded
   char str[] = "math";
   printf("%5s\n", str);           // right-aligned, 5 characters wide
   printf("%-5shello\n", str);     // left-aligned, 5 characters wide
