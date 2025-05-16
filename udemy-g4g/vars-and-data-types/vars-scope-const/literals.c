@@ -1,3 +1,17 @@
+/**
+ * @file literals.c
+ * @author Gregory Larsen
+ * @brief Demonstrates the use of various literal types in C
+ * @details
+ * This program shows how to use integer, floating-point, character, and string literals in C.
+ * It covers decimal, hexadecimal, octal, and binary integer literals, as well as floating-point
+ * literals in standard, scientific, and hexadecimal notation. The program also demonstrates
+ * printing values in different bases and how to display the binary representation of an integer.
+ *
+ * @note C does not have a built-in format specifier for binary output, so a custom loop is used.
+ * @date 2025-05-16
+ */
+
 #include <stdio.h>
 
 int main() {
@@ -29,6 +43,7 @@ int main() {
   printf("Decimal value of 0x1A: %d\n", b);
   printf("Octal value of 016: %o\n", c);
   printf("Decimal value of 016: %d\n", c);
+
   /* This code block prints the binary representation of the variable `d` (which has the value
   0b1101 or 13 in decimal). Let me explain how it works:
 
@@ -52,7 +67,9 @@ int main() {
   (0b1101) and an int is 32 bits, it would display: `00000000000000000000000000001101`
 
   The code essentially creates a custom binary formatter since C doesn't have a built-in format
-  specifier for binary output like it does for decimal (%d), hexadecimal (%x), or octal (%o).*/
+  specifier for binary output like it does for decimal (%d), hexadecimal (%x), or octal (%o).
+  */
+
   printf("Binary value of 0b1101: ");
   for (int i = sizeof(int) * 8 - 1; i >= 0; i--) {
     printf("%d", (d >> i) & 1);
