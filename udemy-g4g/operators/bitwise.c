@@ -38,8 +38,10 @@ int main(int argc, char *argv[]) {
   printf("Decimal    ~%d: %d\n", x, ~x);
 
   printf("\nShift operators:\n");
-  // x shifts
-  printf("\t<< shifts left, equivalent to multiplying by 2^n (for non-negative integers), where n is the number of bits shifted.\n");
+  printf(
+      "\t<< shifts left, and is equivalent to multiplying by 2^n (for non-negative integers) only "
+      "if no significant bits are lost (i.e., no overflow occurs). If the result overflows the "
+      "type, the behavior is undefined for signed integers and wraps for unsigned integers.\n");
   printf("Bitwise %d << 1: ", x);
   print_binary(x << 1);
   printf("Decimal %d << 1: %d\n", x, x << 1);
@@ -56,7 +58,10 @@ int main(int argc, char *argv[]) {
   print_binary(y << 2);
   printf("Decimal %d << 2: %d\n\n", y, y << 2);
 
-  printf("\t>> shifts right, equivalent to integer division by 2^n for non-negative integers; for negative numbers, results may differ.\n");
+  printf(
+      "\t>> shifts right, and is equivalent to integer division by 2^n for non-negative integers; "
+      "for negative numbers or if the type is signed, results may differ depending on "
+      "implementation.\n");
   printf("Bitwise %d >> 1: ", x);
   print_binary(x >> 1);
   printf("Decimal %d >> 1: %d\n", x, x >> 1);
