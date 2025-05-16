@@ -35,7 +35,8 @@ int main(int argc, char *argv[]) {
   // NOT
   printf("Bitwise    ~%d: ", x);
   print_binary(~x);
-  printf("Decimal    ~%d: %d\n", x, ~x);
+  printf("Decimal (default signed int) ~%d: %d\n", x, ~x);
+  printf("Decimal (unsigned int) ~%d: %u\n", x, (unsigned int)~x);
 
   printf("\nShift operators:\n");
   printf(
