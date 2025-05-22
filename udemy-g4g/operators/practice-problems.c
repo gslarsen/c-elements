@@ -8,7 +8,7 @@
 
 int main(int argc, char *argv[]) {
   int x = 10, y = 20, z = 5, a;
-  a = (x < y < z);
+  // a = (x < y < z);
   printf("a = %d\n", a);
 
   return 0;
