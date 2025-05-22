@@ -13,9 +13,9 @@ int main() {
   int x, y;
   int c;
 
-  printf("Enter first integer: ");
+  printf("Enter an integer: ");
   scanf("%d", &x);
-  // this section, but shows how to handle the buffer
+  // this section shows how to handle the buffer
   // Check if the next character in the buffer is a newline
   c = getchar();
   if (c == '\n') {
@@ -23,11 +23,16 @@ int main() {
     printf("Enter second integer: ");
   } else if (c != EOF) {
     // Put the character back into the buffer if it's not EOF
-    ungetc(c, stdin);
+    // ungetc(c, stdin);
+    // OR, Clear the buffer up to the next newline
+    while (c != '\n' && c != EOF) {
+      c = getchar();
+    }
+    printf("Enter second integer: ");
   }
   // Now we can safely read the second integer
   scanf("%d", &y);
-  printf("The product is: %d\n", x * y);
+  printf("The product of %i and %i is: %d\n", x, y, x * y);
 
   return 0;
 }
