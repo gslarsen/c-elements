@@ -17,5 +17,6 @@ int main(int argc, char *argv[]) {
 
   printf("%d days before %d is %d\n", n, d, ans);
   printf("%d days before %d is %d\n", n, d, ans2);
+  printf("%d\n", -7 % 7);
   return 0;
 }
