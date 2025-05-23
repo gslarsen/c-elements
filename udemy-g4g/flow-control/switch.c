@@ -9,7 +9,7 @@
 
 int main(int argc, char *argv[]) {
   int x = 0, y = 0, c;  // c is for clearing the input buffer
-  char ch;
+  int ch;
 
   printf("Enter a choice (u (up), d (down), l (left), r (right) OR x (exit)): ");
   ch = tolower(getchar());
